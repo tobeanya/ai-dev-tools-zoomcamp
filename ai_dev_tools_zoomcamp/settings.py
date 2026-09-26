@@ -60,9 +60,8 @@ WSGI_APPLICATION = "ai_dev_tools_zoomcamp.wsgi.application"
 ASGI_APPLICATION = "ai_dev_tools_zoomcamp.asgi.application"
 
 # Defaults to SQLite so `pytest`/`manage.py` work with zero extra setup.
-# Set DATABASE_HOST to point at Postgres (see _docs/architecture.md) once
-# a Postgres driver dependency is added — targeted for the task that
-# introduces the first real models.
+# Set DATABASE_HOST to point at a real Postgres instance (see
+# _docs/architecture.md) — the psycopg driver is already installed.
 if os.environ.get("DATABASE_HOST"):
     DATABASES = {
         "default": {
