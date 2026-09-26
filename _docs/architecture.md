@@ -5,7 +5,7 @@
 **Related:**
 [MVP Scope](weekly-project-feedback-mvp-scope.md) ·
 [Tech Stack Options](tech-stack-options.md) ·
-[Task Backlog](../_docs/tasks.md)
+[Task Backlog](tasks.md)
 
 **Stack:** Django + Django REST Framework, PostgreSQL, Celery + Redis, django-allauth.
 
@@ -96,7 +96,7 @@ UI turns out to need heavier client-side state than HTMX comfortably handles.
 
 Each app owns its own models, migrations, and business logic, and maps roughly to a
 section of the MVP scope. This grouping is a starting point — the aim is to keep each
-app small enough that a task from the [backlog](../_docs/tasks.md) usually touches one or
+app small enough that a task from the [backlog](tasks.md) usually touches one or
 two apps, not all of them.
 
 | App | Owns |

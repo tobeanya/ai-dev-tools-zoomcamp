@@ -1,8 +1,8 @@
 # Weekly Project Feedback SaaS — Task Backlog
 
-Derived from [Weekly Project Feedback SaaS — MVP Scope](../docs/weekly-project-feedback-mvp-scope.md),
-[Tech Stack Options](../docs/tech-stack-options.md), and
-[Architecture](../docs/architecture.md) (Option 1: Django + DRF, Postgres, Celery +
+Derived from [Weekly Project Feedback SaaS — MVP Scope](weekly-project-feedback-mvp-scope.md),
+[Tech Stack Options](tech-stack-options.md), and
+[Architecture](architecture.md) (Option 1: Django + DRF, Postgres, Celery +
 Redis, django-allauth).
 
 **Revision note:** This list targets a buildable **first version** of the app, not full
