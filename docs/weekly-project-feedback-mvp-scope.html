@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Weekly Project Feedback SaaS — MVP Scope</title>
+  <style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+  <style type="text/css">:root {
+--ink: #152238;
+--muted: #5f6b7a;
+--brand: #2457c5;
+--brand-soft: #edf3ff;
+--line: #dbe2ea;
+--paper: #ffffff;
+--canvas: #f4f7fb;
+}
+* { box-sizing: border-box; }
+html { font-size: 16px; background: var(--canvas); }
+body {
+width: min(980px, calc(100% - 40px));
+margin: 40px auto;
+padding: 56px 68px;
+color: var(--ink);
+background: var(--paper);
+font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+line-height: 1.62;
+border: 1px solid var(--line);
+border-radius: 16px;
+box-shadow: 0 16px 50px rgba(21, 34, 56, 0.08);
+}
+h1, h2, h3 { line-height: 1.22; }
+h1 { margin: 0 0 8px; font-size: 2.4rem; letter-spacing: -0.035em; }
+h2 { margin-top: 2.6rem; padding-bottom: 0.45rem; border-bottom: 2px solid var(--brand-soft); font-size: 1.45rem; }
+h3 { margin-top: 1.7rem; font-size: 1.08rem; color: #263d65; }
+p, li { color: #26364a; }
+a { color: var(--brand); }
+strong { color: var(--ink); }
+blockquote {
+margin: 1.3rem 0;
+padding: 0.9rem 1.1rem;
+border-left: 4px solid var(--brand);
+background: var(--brand-soft);
+color: #1e407f;
+}
+code {
+padding: 0.12em 0.32em;
+border-radius: 4px;
+background: #eef1f5;
+}
+pre {
+overflow-x: auto;
+padding: 1rem;
+border: 1px solid var(--line);
+border-radius: 8px;
+background: #f8fafc;
+}
+pre code { padding: 0; background: transparent; }
+table {
+width: 100%;
+margin: 1.2rem 0;
+border-collapse: collapse;
+font-size: 0.94rem;
+}
+th, td {
+padding: 0.72rem 0.8rem;
+border: 1px solid var(--line);
+text-align: left;
+vertical-align: top;
+}
+th { background: var(--brand-soft); color: #173d82; }
+tr:nth-child(even) td { background: #fbfcfe; }
+hr { margin: 2rem 0; border: 0; border-top: 1px solid var(--line); }
+@media (max-width: 700px) {
+body {
+width: 100%;
+margin: 0;
+padding: 28px 20px;
+border: 0;
+border-radius: 0;
+}
+h1 { font-size: 2rem; }
+table { display: block; overflow-x: auto; }
+}
+@media print {
+html { background: #fff; }
+body {
+width: 100%;
+margin: 0;
+padding: 0;
+border: 0;
+box-shadow: none;
+}
+h2 { break-after: avoid; }
+table, blockquote, pre { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Weekly Project Feedback SaaS — MVP Scope</h1>
+</header>
+<h1 id="weekly-project-feedback-saas">Weekly Project Feedback SaaS</h1>
+<h2 id="minimum-viable-product-scope">Minimum Viable Product Scope</h2>
+<p><strong>Version:</strong> 1.0<br />
+<strong>Status:</strong> Finalized<br />
+<strong>Date:</strong> September 25, 2026</p>
+<hr />
+<h2 id="1-product-summary">1. Product summary</h2>
+<p>The product is a multi-tenant SaaS platform for large project teams.
+It collects structured weekly feedback from every team member, protects
+optional anonymity, converts high-volume feedback into reviewable
+themes, guides workstream retrospectives, consolidates results into
+project-level summaries, and tracks resulting actions.</p>
+<p>The product is a feedback, retrospective, and continuous-improvement
+system. It is not a replacement for a full project-management
+platform.</p>
+<h3 id="core-product-loop">Core product loop</h3>
+<blockquote>
+<p>Invite → Submit → Group → Review → Vote → Discuss → Act → Follow
+up</p>
+</blockquote>
+<h2 id="2-product-goals">2. Product goals</h2>
+<p>The MVP must enable organizations to:</p>
+<ul>
+<li>Collect useful weekly feedback from every project participant.</li>
+<li>Surface accomplishments, blockers, risks, decisions needed, and
+improvement opportunities.</li>
+<li>Allow each response to be submitted with the contributor&#39;s name or
+anonymously.</li>
+<li>Give every eligible member an equal opportunity to prioritize
+discussion topics.</li>
+<li>Turn large volumes of written feedback into facilitator-reviewed
+themes.</li>
+<li>Run biweekly workstream retrospectives and create a consolidated
+project summary.</li>
+<li>Convert agreed improvements into owned, trackable actions.</li>
+<li>Show project confidence trends without exposing individual
+responses.</li>
+<li>Support projects containing more than 100 participants.</li>
+</ul>
+<h2 id="3-target-customers-and-supported-scale">3. Target customers and
+supported scale</h2>
+<h3 id="target-customers">Target customers</h3>
+<ul>
+<li>Organizations running large, cross-functional projects.</li>
+<li>Projects divided into workstreams or subteams.</li>
+<li>Project participants who may include employees, contractors,
+clients, and invited external contributors.</li>
+</ul>
+<h3 id="mvp-tested-limits">MVP tested limits</h3>
+<ul>
+<li>Up to 1,000 members per project.</li>
+<li>Up to 100 workstreams per project.</li>
+<li>Up to 10,000 feedback entries per cycle.</li>
+</ul>
+<p>Deployments above these limits are not guaranteed during the MVP.</p>
+<h2 id="4-product-hierarchy">4. Product hierarchy</h2>
+<pre class="text"><code>Organization
+└── Project
+    ├── Workstreams
+    │   ├── Members
+    │   ├── Weekly feedback cycles
+    │   ├── Themes and voting
+    │   ├── Retrospectives
+    │   └── Workstream actions
+    ├── Project-wide summary
+    └── Project-wide actions</code></pre>
+<p>A person may belong to multiple organizations, projects, and
+workstreams.</p>
+<h2 id="5-roles-and-permissions">5. Roles and permissions</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Role</th>
+<th>Core permissions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Platform administrator</td>
+<td>Approves initial organization administrators and handles authorized
+platform-level security and abuse matters.</td>
+</tr>
+<tr class="even">
+<td>Organization administrator</td>
+<td>Configures the organization, administrators, retention, privacy
+thresholds, integrations, projects, and audit access.</td>
+</tr>
+<tr class="odd">
+<td>Project owner</td>
+<td>Configures a project, creates workstreams, invites participants,
+appoints facilitators, and oversees project summaries.</td>
+</tr>
+<tr class="even">
+<td>Workstream facilitator</td>
+<td>Reviews responses, approves AI themes, manages voting and agendas,
+conducts retrospectives, and approves actions.</td>
+</tr>
+<tr class="odd">
+<td>Project member</td>
+<td>Submits feedback, votes, participates in retrospectives, proposes
+actions, and manages assigned actions.</td>
+</tr>
+</tbody>
+</table>
+<p>The project owner is the default facilitator but may appoint another
+active project member as facilitator for a workstream or
+retrospective.</p>
+<p>Neither project owners nor facilitators can identify anonymous
+contributors.</p>
+<h2 id="6-organization-creation-authentication-and-invitations">6.
+Organization creation, authentication, and invitations</h2>
+<h3 id="organization-creation">Organization creation</h3>
+<ul>
+<li>Only approved organization administrators may create
+organizations.</li>
+<li>A platform administrator manually approves the first administrator
+for an organization.</li>
+<li>The first organization administrator may appoint additional
+organization administrators.</li>
+</ul>
+<h3 id="supported-authentication">Supported authentication</h3>
+<ul>
+<li>Email and password.</li>
+<li>Passwordless email link.</li>
+<li>Google account.</li>
+<li>Microsoft account.</li>
+</ul>
+<p>Enterprise SSO is outside the MVP.</p>
+<h3 id="invitations">Invitations</h3>
+<ul>
+<li>Anyone with a valid project invitation may participate.</li>
+<li>Invitations are tied to an email address, organization, project,
+workstream, and role.</li>
+<li>Invitations expire after 14 days and may be resent.</li>
+<li>Owners and administrators may revoke pending invitations.</li>
+<li>A forwarded invitation cannot be accepted using a different email
+address.</li>
+<li>Guests see only the projects and workstreams to which they were
+invited.</li>
+<li>Guests cannot browse the wider organization directory.</li>
+<li>Removing a participant immediately removes access and future voting
+rights.</li>
+<li>Historical contributions remain subject to the organization&#39;s
+retention policy.</li>
+</ul>
+<h2 id="7-feedback-cycles">7. Feedback cycles</h2>
+<h3 id="default-cadence">Default cadence</h3>
+<ul>
+<li>Feedback collection occurs weekly.</li>
+<li>Workstream retrospectives occur every two weeks.</li>
+<li>Each retrospective normally covers the two preceding feedback
+cycles.</li>
+<li>Organization or project administrators may configure both
+schedules.</li>
+<li>Every project has a designated time zone used for deadlines,
+reminders, and meeting times.</li>
+</ul>
+<h3 id="cycle-states">Cycle states</h3>
+<ol type="1">
+<li>Scheduled</li>
+<li>Open</li>
+<li>Closed</li>
+<li>AI review</li>
+<li>Voting</li>
+<li>Retrospective</li>
+<li>Completed</li>
+<li>Archived</li>
+</ol>
+<h3 id="submission-rules">Submission rules</h3>
+<ul>
+<li>Contributors cannot view other responses before the submission
+window closes.</li>
+<li>Contributors may edit or withdraw their own responses while the
+window is open.</li>
+<li>Late submissions are blocked by default.</li>
+<li>The project owner or facilitator may extend a deadline; the
+extension is logged.</li>
+<li>After a cycle closes, removal follows the formal deletion
+process.</li>
+</ul>
+<h2 id="8-weekly-feedback-form">8. Weekly feedback form</h2>
+<p>Every weekly form includes:</p>
+<ol type="1">
+<li>Accomplishments and wins.</li>
+<li>Blockers and risks.</li>
+<li>What should improve.</li>
+<li>Help or decisions needed.</li>
+<li>Team confidence score.</li>
+</ol>
+<h3 id="form-behavior">Form behavior</h3>
+<ul>
+<li>The confidence score is required.</li>
+<li>Written responses are optional to avoid forced, low-quality
+answers.</li>
+<li>Each written response can independently be named or anonymous.</li>
+<li>Named submission is the default.</li>
+<li>A clearly visible <strong>Submit anonymously</strong> control is
+available for every written response.</li>
+<li>The interface previews either <strong>Submitted as [name]</strong>
+or <strong>Submitted anonymously</strong> before final submission.</li>
+</ul>
+<h3 id="confidence-question">Confidence question</h3>
+<blockquote>
+<p>How confident are you that this project or workstream is on track
+this week?</p>
+</blockquote>
+<p>The response uses a five-point scale from <strong>Very low</strong>
+to <strong>Very high</strong>.</p>
+<h2 id="9-anonymity-and-psychological-safety">9. Anonymity and
+psychological safety</h2>
+<p>For an anonymous response:</p>
+<ul>
+<li>Teammates cannot identify the contributor.</li>
+<li>Facilitators cannot identify the contributor.</li>
+<li>Project owners cannot identify the contributor.</li>
+<li>Published themes, summaries, notifications, exports, and excerpts
+contain no identity metadata.</li>
+<li>Anonymous identities are never sent to the AI provider.</li>
+<li>The system may retain a protected internal identity relationship for
+documented security, abuse, or legal needs.</li>
+<li>Only authorized platform security personnel may access that
+relationship.</li>
+<li>Every such access is logged and disclosed in the product&#39;s anonymity
+explanation.</li>
+</ul>
+<p>The retrospective interface must reinforce these working rules:</p>
+<ul>
+<li>Discuss the issue, not the presumed author.</li>
+<li>Do not ask an anonymous author to identify themselves.</li>
+<li>Do not retaliate against critical feedback.</li>
+<li>Convert feedback into decisions or clearly documented
+deferrals.</li>
+</ul>
+<p>If a response concerns the assigned facilitator, the contributor may
+select <strong>Exclude from facilitator review</strong>. The response is
+routed to another authorized facilitator or, if none exists, an
+organization administrator.</p>
+<h2 id="10-visibility-model">10. Visibility model</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Information</th>
+<th>Visibility</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Contributor&#39;s own submission</td>
+<td>Contributor</td>
+</tr>
+<tr class="even">
+<td>Original workstream responses</td>
+<td>Authorized workstream facilitator</td>
+</tr>
+<tr class="odd">
+<td>Anonymous contributor identity</td>
+<td>No project participant</td>
+</tr>
+<tr class="even">
+<td>Approved workstream themes</td>
+<td>Workstream members</td>
+</tr>
+<tr class="odd">
+<td>Approved representative excerpts</td>
+<td>Workstream members</td>
+</tr>
+<tr class="even">
+<td>Project-level themes and trends</td>
+<td>All project members</td>
+</tr>
+<tr class="odd">
+<td>Approved project actions</td>
+<td>All project members</td>
+</tr>
+<tr class="even">
+<td>Escalated risks</td>
+<td>Project owner and appropriate facilitator</td>
+</tr>
+</tbody>
+</table>
+<p>Project owners do not routinely receive every original workstream
+response.</p>
+<h2 id="11-ai-assisted-theme-generation">11. AI-assisted theme
+generation</h2>
+<p>The AI may:</p>
+<ul>
+<li>Group related responses into suggested themes.</li>
+<li>Draft a summary for each theme.</li>
+<li>Identify possible duplicate themes.</li>
+<li>Suggest representative excerpts.</li>
+<li>Highlight potential project-level risks.</li>
+<li>Flag details that may expose an anonymous contributor.</li>
+</ul>
+<p>The facilitator must approve, edit, merge, or reject every
+AI-generated theme before publication.</p>
+<h3 id="ai-safeguards">AI safeguards</h3>
+<ul>
+<li>Use an approved provider that contractually does not train models on
+submitted data.</li>
+<li>Strip names, user IDs, email addresses, and identity metadata before
+processing.</li>
+<li>Encrypt data in transit and at rest.</li>
+<li>Never publish AI-generated content automatically.</li>
+<li>Never evaluate individual employee performance.</li>
+<li>Never identify or speculate about anonymous contributors.</li>
+<li>Never produce automated disciplinary recommendations.</li>
+<li>Record the model and generation time for each draft summary.</li>
+<li>Maintain traceability from an approved theme to its authorized
+source responses.</li>
+<li>Allow organization administrators to disable AI.</li>
+<li>Provide complete manual theme creation, merging, and editing when AI
+is disabled or unavailable.</li>
+<li>Handle provider errors, timeouts, and rate limits without blocking
+the retrospective.</li>
+</ul>
+<h2 id="12-theme-review-and-publication">12. Theme review and
+publication</h2>
+<p>After a feedback window closes:</p>
+<ol type="1">
+<li>AI suggests themes and draft summaries.</li>
+<li>The facilitator reviews the suggestions.</li>
+<li>The facilitator corrects inaccurate groupings.</li>
+<li>The facilitator removes identifying details.</li>
+<li>The facilitator selects safe representative excerpts when
+useful.</li>
+<li>Approved themes are published to the workstream.</li>
+<li>Voting opens.</li>
+</ol>
+<p>Facilitator changes and publication decisions are recorded in the
+audit log.</p>
+<h2 id="13-voting">13. Voting</h2>
+<h3 id="voting-model">Voting model</h3>
+<p>The MVP uses three-credit dot voting:</p>
+<ul>
+<li>Every active workstream member receives one ballot per
+retrospective.</li>
+<li>Each ballot contains three voting credits.</li>
+<li>A member may assign one or two credits to a theme.</li>
+<li>No more than two credits may be assigned to the same theme.</li>
+<li>The remaining credit may be assigned to another theme or left
+unused.</li>
+<li>Voting is optional; members are not forced to use all credits.</li>
+<li>Members may change their votes until the voting window closes.</li>
+<li>Voting is private while the window is open.</li>
+<li>Results appear only after voting closes.</li>
+<li>Facilitators cannot modify votes.</li>
+<li>AI does not vote or determine the final ranking.</li>
+<li>Members active in multiple workstreams receive one ballot in each
+applicable workstream.</li>
+</ul>
+<h3 id="ranking-and-results">Ranking and results</h3>
+<p>Each theme displays:</p>
+<ul>
+<li>Total voting credits.</li>
+<li>Number of unique voters.</li>
+<li>Percentage of participating voters who supported it.</li>
+</ul>
+<p>Themes are ranked primarily by total credits. Ties are resolved by
+unique-voter count. If a tie remains, the facilitator may prioritize the
+theme with greater project risk and must record the reason.</p>
+<p>A facilitator may add an urgent low-ranked risk to the agenda. It
+must be labeled <strong>Facilitator-added risk</strong> and must not be
+presented as a voting result. The override is logged.</p>
+<h2 id="14-retrospective-workflow">14. Retrospective workflow</h2>
+<ol type="1">
+<li>The feedback window closes.</li>
+<li>AI suggests themes or the facilitator creates them manually.</li>
+<li>The facilitator approves the themes.</li>
+<li>Workstream members vote.</li>
+<li>Voting closes and results are published.</li>
+<li>The facilitator prepares the agenda from ranked themes and urgent
+risks.</li>
+<li>The team discusses the selected themes.</li>
+<li>The facilitator records decisions and notes.</li>
+<li>Members propose improvement actions.</li>
+<li>The facilitator approves, merges, rejects, or defers proposals.</li>
+<li>Approved actions receive an owner and due date.</li>
+<li>The facilitator completes and publishes the retrospective
+summary.</li>
+<li>Workstream summaries feed the project-level summary.</li>
+<li>The next retrospective begins by reviewing outstanding actions.</li>
+</ol>
+<p>Attendance tracking is optional and cannot be used as an
+employee-performance score.</p>
+<p>A completed retrospective may be reopened only with a recorded reason
+and audit event.</p>
+<h2 id="15-project-level-consolidation">15. Project-level
+consolidation</h2>
+<p>For projects with more than 100 members:</p>
+<ul>
+<li>Feedback, voting, and retrospectives occur within workstreams.</li>
+<li>Facilitators publish approved workstream summaries.</li>
+<li>AI may suggest cross-workstream themes from approved summaries.</li>
+<li>Project owners review the consolidated project-level draft.</li>
+<li>All project members see the approved project summary, trends,
+decisions, and project actions.</li>
+<li>The project-wide view does not display a single unfiltered list of
+all raw responses.</li>
+</ul>
+<h2 id="16-action-management">16. Action management</h2>
+<h3 id="creation-and-approval">Creation and approval</h3>
+<ul>
+<li>Any project member may propose an action.</li>
+<li>The facilitator may approve, edit, merge, reject, or defer it.</li>
+<li>An approved action requires a title, description, workstream or
+project, owner, due date, status, source retrospective, and related
+theme.</li>
+<li>The proposed owner must accept or decline the assignment.</li>
+<li>Declining requires a short reason.</li>
+<li>Reassignment is logged.</li>
+</ul>
+<h3 id="action-statuses">Action statuses</h3>
+<ul>
+<li>Proposed</li>
+<li>Awaiting acceptance</li>
+<li>Accepted</li>
+<li>In progress</li>
+<li>Blocked</li>
+<li>Completed</li>
+<li>Rejected</li>
+<li>Cancelled</li>
+</ul>
+<p>Overdue and blocked actions appear at the next retrospective.</p>
+<h3 id="organization-selected-action-mode">Organization-selected action
+mode</h3>
+<p><strong>Native mode:</strong> Actions are managed inside the
+product.</p>
+<p><strong>External mode:</strong> Actions contain links to external
+tools such as Jira or Asana. The MVP supports links and simple exports
+only. Status is updated manually.</p>
+<p>Automatic two-way synchronization is outside the MVP.</p>
+<h2 id="17-notifications">17. Notifications</h2>
+<p>Organizations may enable:</p>
+<ul>
+<li>In-app notifications.</li>
+<li>Email reminders.</li>
+<li>Slack notifications.</li>
+<li>Microsoft Teams notifications.</li>
+</ul>
+<p>Notifications cover:</p>
+<ul>
+<li>Feedback window opened.</li>
+<li>Submission reminder.</li>
+<li>Voting opened.</li>
+<li>Upcoming retrospective.</li>
+<li>Action assigned.</li>
+<li>Action approaching its due date.</li>
+<li>Action overdue.</li>
+<li>New summary published.</li>
+</ul>
+<h3 id="notification-rules">Notification rules</h3>
+<ul>
+<li>Slack and Teams are one-way in the MVP.</li>
+<li>Notifications link users back to the authenticated product.</li>
+<li>Slack and Teams messages contain no anonymous response text.</li>
+<li>Users may choose among the channels enabled by their
+organization.</li>
+<li>Users may configure quiet hours and nonessential reminder
+frequency.</li>
+<li>Duplicate notifications are consolidated.</li>
+<li>Failed deliveries are retried and surfaced to administrators.</li>
+</ul>
+<h2 id="18-confidence-score-privacy">18. Confidence-score privacy</h2>
+<ul>
+<li>The organization configures the minimum response threshold.</li>
+<li>The platform enforces an absolute minimum of five responses.</li>
+<li>Results remain hidden below the configured threshold.</li>
+<li>The interface displays <strong>Not enough responses to publish this
+result safely</strong> when necessary.</li>
+<li>Only aggregate scores and trends are shown.</li>
+<li>Individual scores are never exposed.</li>
+<li>Historical results become hidden if later segmentation could isolate
+individuals.</li>
+<li>Filters cannot be combined in a way that reveals individual
+responses.</li>
+<li>Participation counts may be displayed, but nonparticipants are not
+publicly named.</li>
+</ul>
+<h2 id="19-retention-deletion-and-exports">19. Retention, deletion, and
+exports</h2>
+<h3 id="retention">Retention</h3>
+<ul>
+<li>Original feedback remains stored until manually deleted.</li>
+<li>Projects and workstreams may be archived without deleting
+history.</li>
+<li>Administrators receive periodic reminders that retained feedback
+remains subject to organizational data-handling obligations.</li>
+</ul>
+<h3 id="deletion">Deletion</h3>
+<ul>
+<li>Contributors may withdraw feedback while the feedback window is
+open.</li>
+<li>Organization administrators may delete retained feedback without
+seeing anonymous identities.</li>
+<li>Deleting a response removes directly derived published
+excerpts.</li>
+<li>Affected themes are recalculated or marked as changed.</li>
+<li>Existing decisions and action items are not automatically
+deleted.</li>
+<li>The deletion audit event does not retain the deleted text.</li>
+<li>Deleted data is removed from active systems promptly and from
+backups within 30 days.</li>
+<li>Closing an organization uses a 30-day recovery window before
+permanent removal.</li>
+</ul>
+<h3 id="history-and-exports">History and exports</h3>
+<ul>
+<li>Users may search and filter completed cycles, themes, summaries,
+decisions, and actions according to their permissions.</li>
+<li>Filters include project, workstream, date, status, and theme.</li>
+<li>Authorized users may export approved summaries and actions.</li>
+<li>Exports never contain anonymous identity metadata.</li>
+<li>Raw-response exports require an audited organization-administrator
+workflow.</li>
+<li>Organization administrators may export organizational data before
+account closure.</li>
+</ul>
+<h2 id="20-moderation-and-sensitive-feedback">20. Moderation and
+sensitive feedback</h2>
+<ul>
+<li>Facilitators may flag harassment, threats, personal attacks, or
+exposed sensitive information.</li>
+<li>Flagged material is withheld from published excerpts until
+reviewed.</li>
+<li>Flagging does not reveal an anonymous contributor.</li>
+<li>Feedback concerning a facilitator follows the alternate-review
+route.</li>
+<li>Documented abuse, security, or legal investigations follow the
+restricted platform-security process.</li>
+<li>Access to protected identity records is exceptional, authorized,
+logged, and disclosed.</li>
+</ul>
+<h2 id="21-dashboards">21. Dashboards</h2>
+<h3 id="member-dashboard">Member dashboard</h3>
+<ul>
+<li>Open feedback requests.</li>
+<li>Upcoming retrospectives.</li>
+<li>Voting tasks.</li>
+<li>Assigned actions.</li>
+<li>Recent approved summaries.</li>
+</ul>
+<h3 id="facilitator-dashboard">Facilitator dashboard</h3>
+<ul>
+<li>Participation rate.</li>
+<li>Responses awaiting review.</li>
+<li>AI-suggested themes.</li>
+<li>Voting status and completed results.</li>
+<li>Retrospective agenda.</li>
+<li>Proposed, blocked, and overdue actions.</li>
+</ul>
+<h3 id="project-owner-dashboard">Project owner dashboard</h3>
+<ul>
+<li>Workstream participation.</li>
+<li>Approved workstream summaries.</li>
+<li>Project confidence trends.</li>
+<li>Cross-workstream themes.</li>
+<li>Escalated risks.</li>
+<li>Project-level actions.</li>
+</ul>
+<h3 id="organization-administrator-dashboard">Organization administrator
+dashboard</h3>
+<ul>
+<li>Members and invitations.</li>
+<li>Projects and roles.</li>
+<li>Retention and confidence-threshold settings.</li>
+<li>Authentication and notification integrations.</li>
+<li>Audit activity.</li>
+</ul>
+<h2 id="22-audit-requirements">22. Audit requirements</h2>
+<p>The audit log records:</p>
+<ul>
+<li>Role and permission changes.</li>
+<li>Invitation creation, revocation, and acceptance.</li>
+<li>Feedback-cycle deadline changes.</li>
+<li>Theme approval, editing, merging, and publication.</li>
+<li>Facilitator voting overrides.</li>
+<li>Retrospective reopening.</li>
+<li>Action approval, assignment, reassignment, and status changes.</li>
+<li>Feedback and project deletion.</li>
+<li>Restricted identity-record access.</li>
+<li>Integration and delivery failures affecting workflow.</li>
+</ul>
+<p>Audit logs must not reveal anonymous contributor identities to
+project participants.</p>
+<h2 id="23-security-reliability-and-accessibility-baseline">23.
+Security, reliability, and accessibility baseline</h2>
+<ul>
+<li>Strict separation of data between organizations.</li>
+<li>Role-based authorization on every protected operation.</li>
+<li>Encryption in transit and at rest.</li>
+<li>Secure, expiring invitation and passwordless-login tokens.</li>
+<li>Rate limiting and abuse protection.</li>
+<li>Session revocation.</li>
+<li>Automated backups and tested restoration.</li>
+<li>Secrets stored outside application source code.</li>
+<li>No sensitive feedback in application logs.</li>
+<li>No anonymous response text in third-party analytics or notification
+payloads.</li>
+<li>Responsive web experience across supported desktop, tablet, and
+mobile browsers.</li>
+<li>WCAG 2.1 AA accessibility target.</li>
+</ul>
+<p>Formal compliance certifications are outside the MVP, but the
+architecture must not prevent them later.</p>
+<h2 id="24-success-measures">24. Success measures</h2>
+<p>The MVP measures:</p>
+<ul>
+<li>Weekly feedback participation rate.</li>
+<li>Percentage of feedback submitted before reminders.</li>
+<li>Workstream retrospective completion rate.</li>
+<li>Percentage of AI themes approved without major correction.</li>
+<li>Recurring blockers identified.</li>
+<li>Percentage of approved actions assigned and accepted.</li>
+<li>Action completion rate.</li>
+<li>Average time from feedback submission to action creation.</li>
+<li>Confidence-score trend.</li>
+<li>Member-reported usefulness of retrospectives.</li>
+</ul>
+<p>Metrics are reported at workstream and project levels and cannot be
+repurposed as individual employee-performance scores.</p>
+<p>Pilot targets will be established after baseline usage is
+observed.</p>
+<h2 id="25-explicitly-outside-the-mvp">25. Explicitly outside the
+MVP</h2>
+<ul>
+<li>Native mobile applications.</li>
+<li>Full project planning and task management.</li>
+<li>Time tracking.</li>
+<li>Employee performance or productivity scoring.</li>
+<li>Individual sentiment scoring.</li>
+<li>AI-generated disciplinary recommendations.</li>
+<li>Automatic publication of AI summaries.</li>
+<li>Two-way Jira, Asana, or other task-system synchronization.</li>
+<li>Feedback submission or action management from Slack or Teams.</li>
+<li>Enterprise SSO.</li>
+<li>Cross-organization benchmarking.</li>
+<li>Payroll and HR-system integrations.</li>
+<li>Public feedback forms.</li>
+<li>Automated billing and complex subscription tiers.</li>
+<li>Formal compliance certification.</li>
+</ul>
+<h2 id="26-mvp-acceptance-test">26. MVP acceptance test</h2>
+<p>The MVP is complete when a project with more than 100 participants
+can:</p>
+<ol type="1">
+<li>Create an organization, project, and multiple workstreams.</li>
+<li>Invite participants securely and assign roles.</li>
+<li>Schedule recurring weekly feedback cycles.</li>
+<li>Collect named and anonymous feedback.</li>
+<li>Protect anonymous identities throughout the project workflow.</li>
+<li>Generate AI-suggested themes using de-identified content.</li>
+<li>Let facilitators review and approve themes.</li>
+<li>Give every eligible member three voting credits with no more than
+two per theme.</li>
+<li>Rank themes using credits and unique-voter support.</li>
+<li>Conduct workstream retrospectives and record decisions.</li>
+<li>Consolidate workstream outcomes into a project-level summary.</li>
+<li>Propose, approve, assign, accept, and track actions.</li>
+<li>Notify users through configured in-app, email, Slack, and Teams
+channels.</li>
+<li>Display aggregate confidence trends without exposing
+individuals.</li>
+<li>Search, export, archive, and delete data according to permissions
+and policy.</li>
+<li>Continue the core retrospective workflow when AI or an external
+notification provider is unavailable.</li>
+</ol>
+<hr />
+<h2 id="final-scope-statement">Final scope statement</h2>
+<p>The MVP delivers a complete, psychologically safer feedback-to-action
+workflow for large project teams while deliberately excluding full
+project management, employee surveillance, complex enterprise
+integrations, and automated decision-making. Its defining capabilities
+are optional anonymity, facilitator-reviewed AI themes, equal member
+voting, workstream retrospectives, project-level consolidation, and
+accountable action follow-through.</p>
+</body>
+</html>
