@@ -10,6 +10,10 @@ The product being built is the **Weekly Project Feedback SaaS** — see
 `_docs/architecture.md` for the resulting architecture. All project docs
 live under `_docs/`.
 
+Documents
+
+- `_docs/process.md` - how work is organized
+
 **Chosen stack:** Django + Django REST Framework, PostgreSQL, Celery +
 Redis, django-allauth (Option 1 in the tech stack doc).
 
